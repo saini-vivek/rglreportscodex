@@ -3,7 +3,7 @@ DOCKER_COMPOSE ?= docker compose
 .PHONY: up down build install key migrate shell npm-build test logs
 
 up:
-	$(DOCKER_COMPOSE) up -d
+	$(DOCKER_COMPOSE) up -d --build
 
 down:
 	$(DOCKER_COMPOSE) down

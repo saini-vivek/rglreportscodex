@@ -20,7 +20,15 @@ docker compose exec app php artisan key:generate
 docker compose exec app php artisan migrate
 ```
 
-Open the app at http://localhost:8080. Vite runs on http://localhost:5173.
+Open the app at http://localhost:8090. Vite runs on http://localhost:5173.
+MySQL is available to the Laravel container at `mysql:3306` and from your host at `127.0.0.1:3307`.
+
+If Docker says `pull access denied for rgl-reports-app`, build the local PHP image before running commands that use the `app` service:
+
+```bash
+docker compose build app
+docker compose up -d
+```
 
 With `make` available, the same flow is:
 

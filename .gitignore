@@ -3,6 +3,12 @@
 /public/build
 /public/hot
 /storage/*.key
+/storage/framework/cache/data/*
+!/storage/framework/cache/data/.gitkeep
+/storage/framework/views/*
+!/storage/framework/views/.gitkeep
+/bootstrap/cache/*.php
+!/bootstrap/cache/.gitkeep
 /.env
 /.env.backup
 /.phpunit.result.cache
